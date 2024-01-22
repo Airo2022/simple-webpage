@@ -1,32 +1,53 @@
-.dropdown{
+body{
+    background: #e2e1e0;
+    text-align: center;
+    font-family: monospace;
+}
+
+.card{
+    background: #2e1d30;
+    border-radius: 6px;
     display: inline-block;
+    height: 470px;
+    width: 375px;
+    margin-top: 60px;
+    box-shadow: 0 12px 13px rgba(0, 0, 0, 0.16), 0 12px 13px rgba(0, 0, 0, 0.16);
+
 }
-.dropdown button{
-    background-color: hsl(0, 0%, 80%);
-    color:white;
-    padding: 10px 15px;
+.img{
+    border-radius: 100%;
+    margin-top: 60px;
+    width:132px;
+    height: 128px;
+}
+.name{
+    color: #fff
+}
+.title{
+    color: #7C8097
+    font-size: 16px;
+}
+.desc{
+    font-size: 14px;
+    margin-left: 65px;
+    margin-right: 65px;
+    color: #B7B8C0;
+    margin-top: 16px;
+}
+.btn{
+    outline: none;
+    background: #19A68C;
+    margin-top: 20px;
     border: none;
+    height: 40px;
+    width: 35%;
+    color: #fff;
+    font-size: 16px;
+    border-radius:30px;
+}
+.btn:hover{
+    color: #19A68C;
+    background: #e2e1e0;
+    transition: all 400ms linear;
     cursor: pointer;
-}
-.dropdown a{
-    display: block;
-    color:black;
-    text-decoration: none;
-    padding: 10px 15px;
-}
-.dropdown .content{
-    display: none;
-    position: absolute;
-    background-color: hsl(0, 0%, 95%);
-    min-width: 100px;
-    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8);
-}
-.dropdown:hover .content{
-    display: block;
-}
-.dropdown:hover button{
-    background-color: hsl(0, 0%, 70%);
-}
-.dropdown a:hover{
-    background-color: hsl(0, 0%, 90%)
 }
