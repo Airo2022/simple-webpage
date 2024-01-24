@@ -1,14 +1,4 @@
-<?php
 
-if(!isset($_SESSION)){
-    session_start();
-}
-else{
-    echo "bukaka";
-    echo header("Location: index.php");
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +14,7 @@ else{
     <div class="container light-style flex-grow-1 container-p-y">
     <?php if(isset($_SESSION['Access']) && ($_SESSION['Access'] == "admin" || $_SESSION['Access'] == "user")) { ?>
         <h4 class="font-weight-bold py-3 mb-4">
-            Welcome <?php echo $_SESSION['LoginFname'] ." ". $_SESSION['LoginLname']; ?>!
+            Welcome Juan Dela Cruz!
         </h4>
         <div class="card overflow-hidden">
             <div class="row no-gutters row-bordered row-border-light">
@@ -32,27 +22,27 @@ else{
                     <div class="tab-content">
                         <div class="tab-pane fade active show" id="account-general">
                             <div class="card-body media align-items-center">
-                                <img src="images/img.jpg" height = "100">
+                                <img src="img.jpg" height = "100">
 
                             </div>
                             <hr class="border-light m-0">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label class="form-label"><b><?php echo $_SESSION['LoginFname'] ." ". $_SESSION['LoginMname'] ." ". $_SESSION['LoginLname']; ?></b></label>
+                                    <label class="form-label"><b>Juan Dela Cruz></b></label>
  
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label"><?php echo $_SESSION['Sports'] ?></label>
+                                    <label class="form-label">Boxing</label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label"><?php echo $_SESSION['Birthday'] ?></label>
+                                    <label class="form-label">2008-12-25</label>
 
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">3-0-0</label>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label"><?php echo $_SESSION['RecAccom'] ?></label>
+                                    <label class="form-label">2x Division Champion</label>
                                 </div>
                             </div>
                         </div>
