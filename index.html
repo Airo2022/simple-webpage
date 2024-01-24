@@ -1,60 +1,52 @@
+<?php
 
 
+
+if(isset($_POST['submit'])){
+   
+    $First = $_POST['First'];
+    $Second = $_POST['Second'];  
+    
+    if($First == $Second){
+    echo header("Location: password.php");
+    }
+    else{
+        echo '<h5 align = "center">Password do not match!</h5>';
+    }
+    
+    
+
+    
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Athletes Profile Template</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Create User</title>
 </head>
-
 <body>
-    <div class="container light-style flex-grow-1 container-p-y">
-        <h4 class="font-weight-bold py-3 mb-4">
-            Welcom Juan De la Cruz
-        </h4>
-        <div class="card overflow-hidden">
-            <div class="row no-gutters row-bordered row-border-light">
-               
-                <div class="col-md-9">
-                    <div class="tab-content">
-                        <div class="tab-pane fade active show" id="account-general">
-                            <div class="card-body media align-items-center">
-                                <img src="img.jpg" alt
-                                    class="d-block ui-w-80">
+    <div class = "bg-dark d-flex justify-content-center align-items-center w-100 vh-100">
+        <div class = "bg-white w-30 rounded p-3">
+            <h4>New Password Form</h4>
+            <form action = "" method = "post">
+                <div class = "mb-2">
+                    <input minlength = "4" maxlength = "20" type = "text" class = "form-control" name = "First" placeholder = "enter Old Password" required/>
+                </div>
+                <div class = "mb-2">
+                    <input minlength = "4" maxlength = "20" type = "text" class = "form-control" name = "First" placeholder = "enter New Password" required/>
+                </div>
+                <div class = "mb-2">
+                    <input  minlength = "4" maxlength = "20"type = "text" class = "form-control" name = "Second" placeholder = "Reenter New Password" required/>
+                </div>
 
-                            </div>
-                            <hr class="border-light m-0">
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <label class="form-label"><b>Juan De la Cruz</b></label>
- 
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Boxer</label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">August 21, 2008</label>
-
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">3-0-0</label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim assumenda dolorum et earum est eaque. Ad veniam dolorem rerum reprehenderit at, magni, dolores asperiores ex iusto sunt nulla soluta beatae.</label>
-                                </div>
-                            </div>
-                        </div>
-                        
-        <div class="text-right mt-3">
-            <button type="button" class="btn btn-primary">Sign Out</button>&nbsp;
+                <input type = "submit" name = "submit" value ="Submit Form" class = "btn btn-success"> 
+            </form>        
         </div>
-
-
-    </script>
+    </div>
 </body>
-
 </html>
