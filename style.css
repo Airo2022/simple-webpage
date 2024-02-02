@@ -51,11 +51,40 @@ nav a{
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+
+ }
+ .sidebar li{
+    width: 100%;
+ }
+ .sidebar a{
+    width: 100%;
+ }
+
+ .menu-button{
+    display: none;
+ }
+
+ @media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+
+ }
+
+ .menu-button{
+    display: block;
+ }
+
+ @media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
 
  }
