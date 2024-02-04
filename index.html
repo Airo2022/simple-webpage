@@ -1,38 +1,4 @@
-<?php
-session_start();
-include_once("connections/connection.php");
-$con = connection();
 
-if(isset($_POST['login'])){
-    $fname = $_POST['fname'];
-    $mname = $_POST['mname'];
-    $lname = $_POST['lname'];
-    $password = $_POST['password'];
-
-    $sql = "SELECT * FROM _record WHERE _first_name = '$fname' AND _middle_name = '$mname' AND _last_name = '$lname' AND _password = '$password'";
-    $user = $con->query($sql) or die($con->error);
-    $row = $user->fetch_assoc();
-    $total = $user->num_rows;
-
-    if($total > 0){
-        $_SESSION['id'] = $row['_id'];
-        $_SESSION['LoginFname'] = $row['_first_name'];
-        $_SESSION['LoginMname'] = $row['_middle_name'];
-        $_SESSION['LoginLname'] = $row['_last_name'];
-        $_SESSION['Password'] = $row['_password'];       
-        $_SESSION['Access'] = $row['_access'];
-        $_SESSION['Sports'] = $row['_sport'];
-        $_SESSION['Birthday'] = $row['_birthday'];    
-        $_SESSION['Rec'] = $row['_rec'];    
-        $_SESSION['RecAccom'] = $row['_rec_accom'];
-
-        echo header("Location: redirect_to_admin_user.php");
-    }
-    else{
-        echo "<h3>No user found!</h3>";
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
