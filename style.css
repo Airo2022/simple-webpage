@@ -7,7 +7,7 @@
 }
 body{
     min-height: 100vh;
-    background:url(../images/wallpaper.png) no-repeat;
+    background:url(wallpaper.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
