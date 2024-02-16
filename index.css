@@ -1,23 +1,43 @@
-body{
-  margin: 3em;
-}
-.card-img-top{
-  width: 65%;
-  border-radius: 50%;
-  margin: 0 auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
-}
-.card{
-  padding: 1.5em 0.5em 0.5em;
-  text-align: center;
-  border-radius: 2em;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-.card-title{
-  font-weight: bold;
-  font-size: 1.5em;
-}
-.btn-primary{
-  border-radius: 2em;
-  padding: 0.5em  1.5em;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar CSS and HTML ONLY</title>
+    <link rel="stylesheet" href ="css/style.css">
+</head>
+<body>
+    <header>
+        <a href = "#" class="logo">LOGO</a>
+        <input type = "checkbox" id="menu-bar">
+        <label for="menu-bar">Menu</label>
+        <nav class="navbar">
+            <ul>
+                <li><a a href="#">home</a></li>
+                <li><a a href="#">about</a></li>
+                <li><a a href="#">pages +</a>
+                    <ul>
+                        <li><a href ="#">blogs</a></li>
+                        <li><a href ="#">services +</a>
+                            <ul>
+                                <li><a href="#">html</a></li>
+                                <li><a href="#">css</a></li>
+                                <li><a href="#">javascript</a></li>
+                            </ul>    
+                        </li>
+                    </ul>
+                </li>
+                <li><a a href="#">review</a></li>
+                <li><a a href="#">gallery +</a>
+                    <ul>
+                        <li><a href="#">grid gallery</a></li>
+                        <li><a href="#">flex gallery</a></li>                       
+                    </ul>
+                </li>
+                <li><a a href="#">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+</body>
+</html>
