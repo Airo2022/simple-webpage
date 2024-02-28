@@ -1,111 +1,221 @@
+/* 1b2024 */
+
 *{
-    margin:0; padding:0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: capitalize;
-    text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 body{
     min-height: 100vh;
-    background:url(wallpaper.png) no-repeat;
+
+    background-image: url(images/laptop.png);
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+    background-color: #1b2024;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
 }
 
-header{
-    position: fixed;
-    top:0; left: 0; right:0;
-    background: #ffffff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    padding: 0px 7%;
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
+    color: rgb(255, 255, 255);
 }
-header .logo{
-    font-weight: bolder;
-    font-size: 25px;
-    color:#333;
+nav a:hover{
+    background-color: #454545;
 }
-header .navbar ul{
-    list-style: none;
+nav li:first-child{
+    margin-right: auto;
 }
-header .navbar ul li{
-    position: relative;
-    float: left;
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #1b2024;
+    /*background-color: rgba(255, 255, 255, 0.2);*/
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;     /* none to hide flex to show*/
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
-header .navbar ul li a{
-    font-size: 20px;
-    padding:20px;
-    color:#333;
-    display: block;
+
+.sidebar li{
+    width: 100%
 }
-header .navbar ul li a:hover{
-    background:#333;
-    color:#fff;
+
+.sidebar a{
+    width: 100%
 }
-header .navbar ul li ul{
-    position: absolute;
-    left:0;
-    width: 200px;
-    background: #fff;
-    display: none;
-}
-header .navbar ul li ul li{
-    width: 100%;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-header .navbar ul li ul li ul{
-    left:200px;
-    top:0;
-}
-header .navbar ul li:focus-within >ul,
-header .navbar ul li:hover >ul{
-    display: initial;
-} 
-#menu-bar{
-    display: none;
-}
-header label{
-    font-size: 20px;
-    color:#333333;
-    cursor: pointer;
+
+.menu-button{
     display: none;
 }
 
-
-
-@media(max-width:991px){
-    header{
-        padding: 20px;
-    }
-    header label{
-        display: initial;
-    }
-    header .navbar{
-        position: absolute;
-        top:100%; left:0; right:0;
-        background: #fff;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
+@media(max-width: 800px){
+    .hideOnMobile{
         display:none;
     }
-    header .navbar ul li{
+    .menu-button{
+        display: block;
+    }
+}
+@media(max-width: 400px){
+    .sidebar{
         width: 100%;
     }
-    header .navbar ul li ul{
-        position: relative;
-        width:100%;
-    }
-    header .navbar ul li ul li{
-        background:#eee;    
-    }
-    header .navbar ul li ul li ul{
-        width: 100%;
-        left:0;
-    } 
-    #menu-bar:checked ~ .navbar{
-       display: initial; 
-    }
+}
+
+
+
+
+
+/*    Start     */
+
+.ContainerOfReplies>p{
+    object-fit: cover;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+
+div p {
+    text-align: justify;
+    font-size: 0.9em;
+ 
+}
+
+/*-----------------------------*/
+.sameflex {
+    display: flex;
+    font-size: .8em;
+    padding: 4vw;
+}
+
+span .timeAgo{
+    color:gray;
+    font-weight: lighter;
+}
+.replies img{
+    width: 4wv;
+    height: 4ex;
+    object-fit: cover;
+
+    border: 1px  black;
+    border-radius: 90px; 
+    margin-bottom: 0;
+    padding: .5rem;
+}
+
+
+
+.replyContain a {
+   
+    text-decoration: none;
+    border: 1px solid white;
+
+}
+
+.replyContain img {
+
+    vertical-align: super;
+    width: 10px;
+    height: 8px;
+    
+    padding-left: 0.1vw;
+    padding-right: 0wv;
+
+    margin: 5;
+    vertical-align: middle;
+    font-size: .7rem;
+
+
+}
+
+.replies {
+         /* testing delete this later */
+}
+
+
+
+/* ------------------ Replied of Reply 2nd attachments------------------- */
+
+
+
+.SecSameFlex {
+    display: flex;
+    font-size: .8em;
+    padding: 4vw;
+}
+
+span .SecTimeAgo{
+    color:gray;
+    font-weight: lighter;
+}
+.box2Replied img{
+    width: 4wv;
+    height: 4ex;
+    border: 1px  black;
+    border-radius: 90px; 
+    margin-bottom: 0;
+    padding: .5rem;
+}
+
+
+
+.SecReplyContain a {
+   
+    text-decoration: none;
+    border: 1px solid white;
+
+}
+
+.SecReplyContain img {
+
+    
+    width: 10px;
+    height: 8px;
+    object-fit: cover;
+
+    padding-left: 0.1vw;
+    padding-right: 0wv;
+
+    margin: 5;
+    vertical-align: middle;
+    font-size: .7rem;
+
+
+}
+
+.box2Replied {
+     padding-left: 10vw;
+}
+
+
+/* holder of container*/
+.ContainerOfReplies>div {
+    margin-top:     -4vw;
+    margin-bottom:  -8.5vw;
 
 }
