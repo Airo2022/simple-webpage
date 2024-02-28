@@ -3,41 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NavBar CSS and HTML ONLY</title>
-    <link rel="stylesheet" href ="style.css">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-    <header>
-        <a href = "#" class="logo">LOGO</a>
-        <input type = "checkbox" id="menu-bar">
-        <label for="menu-bar">Menu</label>
-        <nav class="navbar">
-            <ul>
-                <li><a a href="#">home</a></li>
-                <li><a a href="#">about</a></li>
-                <li><a a href="#">pages +</a>
-                    <ul>
-                        <li><a href ="#">blogs</a></li>
-                        <li><a href ="#">services +</a>
-                            <ul>
-                                <li><a href="#">html</a></li>
-                                <li><a href="#">css</a></li>
-                                <li><a href="#">javascript</a></li>
-                            </ul>    
-                        </li>
-                    </ul>
-                </li>
-                <li><a a href="#">review</a></li>
-                <li><a a href="#">gallery +</a>
-                    <ul>
-                        <li><a href="#">grid gallery</a></li>
-                        <li><a href="#">flex gallery</a></li>                       
-                    </ul>
-                </li>
-                <li><a a href="#">contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+    <nav>
+        <ul class = "sidebar">
+            <li onclick = hideSidebar()><a href = "#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href = "#">Blog</a></li>
+            <li><a href = "#">Products</a></li>
+            <li><a href = "#">About</a></li>
+            <li><a href = "#">Forum</a></li>
+            <li><a href = "#">Login</a></li>
+        </ul>
+        <ul>
+            <li><a href = "#">MySite</a></li>
+            <li class = "hideOnMobile"><a href = "#">Blog</a></li>
+            <li class = "hideOnMobile"><a href = "#">Products</a></li>
+            <li class = "hideOnMobile"><a href = "#">About</a></li>
+            <li class = "hideOnMobile"><a href = "#">Forum</a></li>
+            <li class = "hideOnMobile"><a href = "#">Login</a></li>
+            <li class = "menu-button" onclick = showSidebar()><a href = "#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+    <!--     -->
+<div class="ContainerOfReplies">
+
+        <p>  
+            Lorem ipsum dolor sit amet. Cum ducimus suscipit sed sint voluptas aut exercitationem eligendi aut nobis temporibus aut soluta aliquid est odit ipsam non iste iure. Aut similique explicabo et sint dolorum in vero sint cum officiis quis et itaque veritatis aut galisum consectetur? Qui explicabo porro sed praesentium nisi sit totam voluptatem est quos ullam est quia expedita et architecto maxime nam molestiae earum. In ipsum laboriosam ut consectetur sunt sed consectetur saepe et fugit repudiandae in molestias consectetur eos cumque optio.
+        </p>
+
+
+        <!-- Normal Reply to gallery -->
+
+        <div class="replies"> 
+            <span class="sameflex">
+                <img src="images/cuteart.jpeg">
+                <span>
+                    <h3>characterName<span class="timeAgo"> - [time]</span></h3>
+                
+                    <p class="myThumb">the quick brown fox jumps over the lazy dog.the quick brown fox jumps over the lazy dog. 
+                        the quick brown fox jumps over the lazy dog.the quick brown fox jumps over the lazy dog.
+                    </p>
+
+                        <div class="SecReplyContain">
+                            <a href="#"><img src="images/messagenotification.png">Reply</a>  
+                        </div>  
+                </span>
+            </span>
+
+        </div>
+
+
+
+
+        <!-- Reply of Replies -->
+
+        <div class="box2Replied">
+            <span class="SecSameFlex">
+                <img src="images/cuteart.jpeg">
+                <span>
+                    <h3>CharacterName<span class="SecTimeAgo"> -[time]</span></h3>
+                        <p class="SecMyThumb">the quick brown fox jumps over the lazy dog.the quick brown fox jumps over the    lazy dog. 
+                        the quick brown fox jumps over the lazy dog.the quick brown fox jumps over the lazy dog.
+                        </p>
+
+                    <div class="SecReplyContain">
+                        <a href="#"><img src="images/messagenotification.png">Reply</a>
+                    </div>
+                </span>  
+            </span>
+        </div>
+
+
+</div>
+
+
+
+
+    <!--  -->
+    <script src = "index.js"></script>  
 </body>
 </html>
